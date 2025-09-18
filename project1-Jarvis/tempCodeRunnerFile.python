@@ -1,0 +1,7 @@
+import requests
+
+newsapi = "84f37199e0094ead93e096c8c81f65d0"
+
+r = requests.get(f"https://newsapi.org/v2/top-headlines?country=in&apiKey={newsapi}")
+print(r.status_code)   # should be 200
+print(r.json())        # see full response
